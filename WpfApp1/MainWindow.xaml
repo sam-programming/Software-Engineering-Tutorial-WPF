@@ -1,0 +1,31 @@
+﻿<Window x:Class="FlockingDemoNonOO.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlockingDemoNonOO"
+        mc:Ignorable="d"
+        Title="Particle Simulator V1.0" Height="500" Width="800">
+    <Viewbox StretchDirection="Both" Stretch="Uniform">
+        <Grid>
+
+            <Canvas x:Name="TheCanvas" Width="500" Height="300" Margin="150,33,150,101">
+                <Border BorderThickness="1" BorderBrush="Black" Height="300" Width="500"/>
+
+            </Canvas>
+
+            <Slider x:Name="MassSlider" HorizontalAlignment="Left" Margin="136,389,0,0" VerticalAlignment="Top" Width="120" Maximum="1" ValueChanged="MassSlider_ValueChanged" Minimum="0.1"/>
+            <Label x:Name="MassLabel" Content="Mass" HorizontalAlignment="Left" Margin="150,333,0,0" VerticalAlignment="Top" FontFamily="Chiller" FontSize="36" Height="51"/>
+            <Slider x:Name="CohesionSlider" HorizontalAlignment="Left" Margin="334,389,0,0" VerticalAlignment="Top" Width="120" Maximum="1" Minimum="-1" ValueChanged="CohesionSlider_ValueChanged" LargeChange="0.1" SmallChange="0.01"/>
+            <Slider x:Name="HeadingSlider" HorizontalAlignment="Left" Margin="530,389,0,0" VerticalAlignment="Top" Width="120" Maximum="1" Minimum="-1" ValueChanged="HeadingSlider_ValueChanged" LargeChange="0.1" SmallChange="0.01"/>
+            <Label x:Name="CohesionLabel" Content="Cohesion" HorizontalAlignment="Left" Margin="348,333,0,0" VerticalAlignment="Top" FontFamily="Chiller" FontSize="36" Height="51"/>
+            <Label x:Name="HeadingLabel" Content="Heading" HorizontalAlignment="Left" Margin="544,333,0,0" VerticalAlignment="Top" FontFamily="Chiller" FontSize="36" Height="51"/>
+            <Label Content="Mass" HorizontalAlignment="Left" Margin="174,407,0,0" VerticalAlignment="Top"/>
+            <Label Content="Cohesion" HorizontalAlignment="Left" Margin="373,408,0,0" VerticalAlignment="Top"/>
+            <Label Content="Heading" HorizontalAlignment="Left" Margin="568,407,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="GravityOn" Content="Gravity" HorizontalAlignment="Left" Margin="593,10,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="FrictionOn" Content="Friction" HorizontalAlignment="Left" Margin="508,10,0,0" VerticalAlignment="Top"/>
+
+        </Grid>
+    </Viewbox>
+</Window>
